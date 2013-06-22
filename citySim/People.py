@@ -2,7 +2,7 @@ import random, time, math
 
 class People:
     def __init__ (self):
-            self.gender = gender(random.randint(0,66))
+            self.gender = self.gender(random.randint(0,66))
             self.money = random.randint(1000, 1000000)
             self.intellgents = random.randint(1, 100)
             self.soical = random.randint(1, 100)
@@ -12,11 +12,11 @@ class People:
             self.name = "bob"
             self.x = random.randint(1, 500)
             self.y = random.randint(1, 500)
-            self.color = colour(self.money)
+            self.color = self.colour(self.money)
             self.width = 3
 
 #randommly genarates a gender 
-    def gender(seed):
+    def gender(self, seed):
         if seed == 0:
             return "Male"
         else:
@@ -25,7 +25,7 @@ class People:
 
         
 #depending on how much money you have changes your colour
-    def colour(money):
+    def colour(self, money):
         if money < 1000:
             return "red"
         elif money < 10000:
